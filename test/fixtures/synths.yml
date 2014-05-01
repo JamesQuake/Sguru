@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  manufacturer: MyString
+  summary: MyString
+  modification: MyString
+
+two:
+  manufacturer: MyString
+  summary: MyString
+  modification: MyString

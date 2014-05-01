@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  studio_id: 
+  name: MyString
+  role: MyString
+
+two:
+  studio_id: 
+  name: MyString
+  role: MyString

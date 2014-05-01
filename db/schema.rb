@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140419185228) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "comments", force: true do |t|
     t.integer  "synth_id"
     t.integer  "user_id"
@@ -21,8 +24,8 @@ ActiveRecord::Schema.define(version: 20140419185228) do
     t.datetime "updated_at"
   end
 
-  add_index "comments", ["synth_id"], name: "index_comments_on_synth_id"
-  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
+  add_index "comments", ["synth_id"], name: "index_comments_on_synth_id", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "pictures", force: true do |t|
     t.integer  "synth_id"
@@ -31,7 +34,7 @@ ActiveRecord::Schema.define(version: 20140419185228) do
     t.datetime "updated_at"
   end
 
-  add_index "pictures", ["synth_id"], name: "index_pictures_on_synth_id"
+  add_index "pictures", ["synth_id"], name: "index_pictures_on_synth_id", using: :btree
 
   create_table "sounds", force: true do |t|
     t.integer  "synth_id"
@@ -40,7 +43,7 @@ ActiveRecord::Schema.define(version: 20140419185228) do
     t.datetime "updated_at"
   end
 
-  add_index "sounds", ["synth_id"], name: "index_sounds_on_synth_id"
+  add_index "sounds", ["synth_id"], name: "index_sounds_on_synth_id", using: :btree
 
   create_table "studios", force: true do |t|
     t.string   "name"
@@ -79,8 +82,8 @@ ActiveRecord::Schema.define(version: 20140419185228) do
     t.string   "uid"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  add_index "users", ["studio_id"], name: "index_users_on_studio_id"
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["studio_id"], name: "index_users_on_studio_id", using: :btree
 
 end

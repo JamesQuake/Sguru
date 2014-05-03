@@ -1,0 +1,5 @@
+Choose Role
+<%= form_tag("/users/role", method: "patch") do %>
+  <%= select_tag(:role, options_for_select(["Musician", "Studio"]) )%>
+  <%= submit_tag("select") %>
+<% end %>

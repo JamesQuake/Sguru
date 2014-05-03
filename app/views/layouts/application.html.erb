@@ -2,22 +2,32 @@
 <html>
 <head>
   <title>Synthfinder</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => false %>
+  <%= javascript_include_tag "vendor/modernizr" %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<% if user_signed_in? %>
-  <%= link_to "logout", destroy_user_session_path, method: :delete %> |
-  <%= current_user.name %>
+<div class="authoration">
+  <% if user_signed_in? %>
+    <%= link_to "logout", destroy_user_session_path, method: :delete %> |
+    <%= current_user.name %>
+  <% else %>
+    <%= link_to "Login", new_user_session_path %>
+    <%= link_to "Sign up", new_user_registration_path %>
+  <% end %>
+</div>
 
-<% else %>
-  <%= link_to "Login", new_user_session_path %>
-  <%= link_to "Sign up", new_user_registration_path %>
-  <%= link_to "Login With Google", user_omniauth_authorize_path(:google_oauth2) %>
+<div class="navigation">
+  <%= link_to "Synths", synths_path %>
+</div>
+<hr>
 
-<% end %>
+<div>
+  <%= notice %>
+  <%= alert %>
+</div>
 
 <%= yield %>
 

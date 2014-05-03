@@ -5,6 +5,8 @@ gem 'rails', '4.1.0'
 
 gem 'devise'
 
+gem 'foundation-rails'
+
 gem "omniauth-google-oauth2"
 
 gem 'pg'

@@ -1,1 +1,22 @@
-<h2>hello world</h2>
+<h2>Synths</h2>
+
+<table>
+  <tr>
+    <td>Manufacturer</td>
+    <td>Model</td>
+    <td>Summary</td>
+    <td>Modification</td>
+    <td> </td>
+  </tr>
+
+  <% @synths.each do |synth| %>
+    <tr>
+      <td><%= synth.manufacturer %></td>
+      <td><%= synth.model %></td>
+      <td><%= synth.summary %></td>
+      <td><%= synth.modification %></td>
+      <td><%= link_to "detail", synth_path(synth) %> </td>
+    </tr>
+  <% end %>
+
+</table>

@@ -4,6 +4,8 @@ Synthfinder::Application.routes.draw do
   devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
   resources :synths
+  resources :pictures
+  resources :sounds
 
   get "/users/role", to: "users#show_role", as: :user_show_role
   patch "/users/role", to: "users#update_role"

@@ -11,6 +11,10 @@ gem "omniauth-google-oauth2"
 
 gem 'pg'
 
+gem 'paperclip'
+
+gem 'aws-sdk'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

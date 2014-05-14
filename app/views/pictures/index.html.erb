@@ -1,0 +1,20 @@
+<h2>Pictures</h2>
+
+<table>
+  <tr>
+    <td>Synth</td>
+    <td>Images</td>
+  </tr>
+
+  <% @pictures.each do |picture| %>
+    <tr>
+      <td><%= picture.synth_id %></td>
+      <% if picture.images.present? %>
+        <td style= "width: 300px;"><%= image_tag picture.images  %></td>
+      <% else %>
+        <td><%= image_tag picture.image.url(:medium) %><td>
+      <% end %>
+    </tr>
+  <% end %>
+
+</table>

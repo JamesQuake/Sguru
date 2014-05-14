@@ -1,0 +1,22 @@
+<h2>Sound</h2>
+
+<table>
+  <tr>
+    <td>Synth</td>
+    <td>Sound</td>
+  </tr>
+
+  <% @sounds.each do |sound| %>
+    <tr>
+      <td><%= sound.synth_id %></td>
+      <td>
+        <audio controls>
+          <source src="<%= sound.audio_file %>" type="audio/mpeg3">
+
+        </audio>
+
+      </td>
+    </tr>
+  <% end %>
+
+</table>

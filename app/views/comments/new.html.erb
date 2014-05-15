@@ -1,0 +1,15 @@
+<%= form_for @comments do |f| %>
+
+
+
+
+  <%= f.label :images %>
+  <%= f.text_field :images, placeholder: "Enter URL (ex: http://www.google.com/synth.jpeg)" %>
+
+  <%= f.label :image %>
+  <%= f.file_field :image %>
+
+
+  <%= f.submit %>
+
+  <% end %>

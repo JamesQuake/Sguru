@@ -1,17 +1,1 @@
-<%= form_for @synth do |f| %>
-
-  <%= f.label :model %>
-  <%= f.text_field :model %>
-
-  <%= f.label :manufacturer %>
-  <%= f.text_field :manufacturer %>
-
-  <%= f.label :summary %>
-  <%= f.text_field :summary %>
-
-  <%= f.label :modification %>
-  <%= f.text_field :modification %>
-
-  <%= f.submit "Create Synth", class:"button" %>
-
-  <% end %>
+<%= render 'form' %>

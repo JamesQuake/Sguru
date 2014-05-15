@@ -1,12 +1,1 @@
-<%= form_for @sound do |f| %>
-
-
-  <%= f.select 'synth_id',  options_from_collection_for_select(@synths, 'id', 'model') %>
-
-  <%= f.label :audio_file %>
-  <%= f.file_field :audio_file %>
-
-
-  <%= f.submit %>
-
-  <% end %>
+<%= render 'form' %>

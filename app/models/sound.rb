@@ -6,4 +6,3 @@ class Sound < ActiveRecord::Base
   validates_attachment_content_type :audio_file, :content_type => ['audio/wav', 'audio/mp3', 'audio/aif', 'audio/ogg']
 
 end
-g

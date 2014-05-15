@@ -1,15 +1,1 @@
-<%= form_for @picture do |f| %>
-
-
-  <%= f.select 'synth_id',  options_from_collection_for_select(@synths, 'id', 'model') %>
-
-  <%= f.label :images %>
-  <%= f.text_field :images, placeholder: "Enter URL (ex: http://www.google.com/synth.jpeg)" %>
-
-  <%= f.label :image %>
-  <%= f.file_field :image %>
-
-
-  <%= f.submit %>
-
-  <% end %>
+<%= render 'form' %>
